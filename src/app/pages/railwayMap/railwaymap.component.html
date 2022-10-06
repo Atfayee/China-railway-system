@@ -1,0 +1,27 @@
+<div class="content" id="content">
+  <div id='map'></div>
+  <div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+      <h2>铁路年份</h2>
+      <label id='year'></label>
+      <input id='slider' type='range' min='0' max='8' step='1' value='0' (input)="filterYears($event)" />
+    </div>
+    <div class='map-overlay-inner'>
+      <h2>读取数据</h2>
+      <input type="file" class="form-control" id="file" (change)="uploadFile($event)" />
+      <p></p>
+      <button nz-button nzType="primary" id="renderLayer" (click)="renderLayer()">生成</button>
+      <button nz-button id="renderLayer" (click)="removeLayer()">清空图层</button>
+    </div>
+    <div class='map-overlay-inner'>
+      <h2>缓冲区分析</h2>
+      <label for="radius">半径:</label>
+      <nz-input-number [(ngModel)]="values"></nz-input-number>
+      <p></p>
+      <nz-button-group>
+        <button nz-button nzType="primary" id="renderBuffer" (click)="renderBuffer()">OK</button>
+        <button nz-button id="stoprBuffer" (click)="stoprBuffer()">Cancel</button>
+      </nz-button-group>
+    </div>
+  </div>
+</div>

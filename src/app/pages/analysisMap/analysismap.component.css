@@ -1,0 +1,16 @@
+.content {
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+#bedscharts {
+    height: 100%;
+}
+[nz-button] {
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+
+  nz-button-group [nz-button] {
+    margin-right: 0;
+  }
